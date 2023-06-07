@@ -1,0 +1,161 @@
+{% extends 'main.html' %}
+{% block content %}
+    <div class="row"  style="margin-bottom: 477px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            {% if pred == 1 %}
+                <div class="card card-body alert alert-danger"><center><p>You are at high risk!</p></P><a href ="https://holyfamilyhospital.in/health/patients/opd-schedule.html">Click here to book your appointment with a specialist.</a></center></div>
+            {% else %}
+                <div class="card card-body alert alert-success"><center>Great! You are HEALTHY.</center></div>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><a href="{{ url_for('home') }}" class="btn btn-block btn-primary">Back to Home Page</a></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+{% endblock %}
+
+
+
+
+MALARIA
+
+{% extends 'main.html' %}
+{% block content %}
+    <div class="row"  style="margin-bottom: 477px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            {% if pred == 1 %}
+                
+                <div class="card card-body alert alert-danger"><center><p>This cell is an Infected Malaria Cell.</p></P><a href ="https://holyfamilyhospital.in/health/patients/opd-schedule.html">Click here to book your appointment with a specialist.</a></center></div>
+            {% else %}
+                <div class="card card-body alert alert-success"><center>This cell is not Infected.</center></div>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><a href="{{ url_for('home') }}" class="btn btn-block btn-primary">Back to Home</a></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+{% endblock %}
+
+
+PNEUMONIA
+
+{% extends 'main.html' %}
+{% block content %}
+    <div class="row"  style="margin-bottom: 477px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            {% if pred == 1 %}
+                <div class="card card-body alert alert-danger"><center>This X-Ray is predicted to have Pneumonia, Please Consult a Specialist.</p></P><a href ="https://holyfamilyhospital.in/health/patients/opd-schedule.html">Click here to book your appointment with a specialist.</a></center></div>
+            {% else %}
+                <div class="card card-body alert alert-success"><center>This X-Ray does not have Pneumonia.</center></div>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><a href="{{ url_for('home') }}" class="btn btn-block btn-primary">Back to Home Page</a></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+{% endblock %}
+
+Signup html
+
+{% extends 'main.html' %}
+{% block content %}
+{% if message %}
+        <div class="alert alert-danger">{{ message }}</div>
+    {% endif %}
+    <body>
+        <br>
+        <br>
+        
+        <h1>Sign Up only for Doctors!</h1>
+        <br>
+        
+        <form action="/signup" method="POST">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br><br>
+          
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required><br><br>
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required><br><br>
+          
+          <label for="confirm_password">Confirm Password:</label>
+          <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+          
+          <button type="submit">Sign Up</button>
+        </form>
+      </body>
+{% endblock %}
+
+Sihn up 1 html
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page in HTML with CSS Code Example</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" href="C:\Users\Aaron\Desktop\MPR\Multi_Disease_Predictor-master\templates\style.css">
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="C:\Users\Aaron\Desktop\MPR\Multi_Disease_Predictor-master\templates\style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="box-form">
+	<div class="left">
+		<div class="overlay">
+		<h1>Hello World.</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Curabitur et est sed felis aliquet sollicitudin</p>
+		<span>
+			<p>login with social media</p>
+			<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Login with Twitter</a>
+		</span>
+		</div>
+	</div>
+	
+	
+		<div class="right">
+		<h5>Login</h5>
+		<p>Don't have an account? <a href="#">Creat Your Account</a> it takes less than a minute</p>
+		<div class="inputs">
+			<input type="text" placeholder="user name">
+			<br>
+			<input type="password" placeholder="password">
+		</div>
+			
+			<br><br>
+			
+		<div class="remember-me--forget-password">
+				<!-- Angular -->
+	<label>
+		<input type="checkbox" name="item" checked/>
+		<span class="text-checkbox">Remember me</span>
+	</label>
+			<p>forget password?</p>
+		</div>
+			
+			<br>
+			<button>Login</button>
+	</div>
+	
+</div>
+<!-- partial -->
+  
+</body>
+</html>
+
